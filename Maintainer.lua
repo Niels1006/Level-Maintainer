@@ -1,15 +1,15 @@
-require("src.AE2")
-require("src.Utility")
+local ae2 = require("src.AE2")
 local cfg = require("config")
 
-local items = cfg
+local items = cfg.items
+local sleepInterval = cfg.sleep
 
 while true do
-    local itemsCrafting = checkIfCrafting()
+    local itemsCrafting = ae2.checkIfCrafting()
 
     for k, v in pairs(items) do
         if itemsCrafting[k] ~= true then
-            local answer = requestItem(k, v)
+            local answer = ae2.requestItem(k, v)
             if answer == true then
                 print("[" .. os.date("%H:%M:%S") .. "] " .. "Requested " .. v .. "x " .. k)
             else
@@ -18,5 +18,5 @@ while true do
         end
 
     end
-    os.sleep(5)
+    os.sleep(sleepInterval)
 end

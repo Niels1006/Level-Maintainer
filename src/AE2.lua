@@ -1,7 +1,9 @@
 local component = require("component")
 local ME = component.me_interface
 
-function requestItem(name, count)
+local AE2 = {}
+
+function AE2.requestItem(name, count)
     craftables = ME.getCraftables({
         ["label"] = name
     })
@@ -21,7 +23,7 @@ function requestItem(name, count)
     return nil
 end
 
-function checkIfCrafting()
+function  AE2.checkIfCrafting()
     local cpus = ME.getCpus()
     local items = {}
     for k, v in pairs(cpus) do
@@ -33,3 +35,5 @@ function checkIfCrafting()
 
     return items
 end
+
+return AE2

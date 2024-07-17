@@ -1,5 +1,6 @@
 # Infinite Maintainer
-Lets you maintain without lag.
+Lets you passive lines easily, without lag and randomness of AE2 maintainer.
+Maybe I will also add a threshold option, but it's not needed for passive lines, so...
 
 # Setup
 - ME interface connected to an adapter

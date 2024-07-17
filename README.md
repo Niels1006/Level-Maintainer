@@ -2,7 +2,10 @@
 Lets you maintain without lag.
 
 # Installation
+Download it
 `wget https://raw.githubusercontent.com/Niels1006/Infinite-Maintainer/master/installer.lua && installer`
+
+Run it
 `Maintainer`
 
 # Config

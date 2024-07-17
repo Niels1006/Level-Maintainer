@@ -1,6 +1,11 @@
 # Infinite Maintainer
 Lets you maintain without lag.
 
+# Setup
+- ME interface connected to an adapter
+- (Internet card)
+- OC stuff to make a basic computer
+
 # Installation
 Download it
 ```bash

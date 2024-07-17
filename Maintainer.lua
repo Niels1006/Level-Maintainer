@@ -1,10 +1,8 @@
-require("src.RequestCraftingItem")
+require("src.AE2")
 require("src.Utility")
+local cfg = require("config")
 
-local items = {
-    ["drop of Molten SpaceTime"] = 1,
-    ["drop of Raw Stellar Plasma Mixture"] = 1
-}
+local items = cfg
 
 while true do
     local itemsCrafting = checkIfCrafting()

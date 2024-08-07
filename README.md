@@ -3,7 +3,8 @@ Lets you passive lines easily, without lag and randomness of AE2 maintainer.
 Maybe I will also add a threshold option, but it's not needed for passive lines, so...
 
 # Setup
-- ME interface connected to an adapter
+- Full block ME interface connected to an adapter
+- Crafting Monitors on your CPUs
 - (Internet card)
 - OC stuff to make a basic computer
 

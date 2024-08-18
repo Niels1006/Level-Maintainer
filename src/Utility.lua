@@ -27,3 +27,9 @@ function parser(string)
         return 0
     end
 end
+
+function logInfo(string)
+    if type(string) == "string" then
+        print("[" .. os.date("%H:%M:%S") .. "] " .. string)
+    end
+end

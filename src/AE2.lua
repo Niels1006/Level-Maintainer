@@ -25,9 +25,9 @@ function AE2.requestItem(name, threshold, count)
                 os.sleep(1)
             end
             if craft.hasFailed() then
-                return table.unpack({false, "Failed to request " .. name .. "x " .. count})
+                return table.unpack({false, "Failed to request " .. name .. " x " .. count})
             else
-                return table.unpack({true, "Requested " .. name .. "x " .. count})
+                return table.unpack({true, "Requested " .. name .. " x " .. count})
             end
 
         end

@@ -20,5 +20,6 @@ Maintainer
 ```
 
 # Config
-You can change maintained items in `config.lua`. Pattern is as follows: `["item_name"] = batch_size` as well as the time inbetween craft checks.
+You can change maintained items in `config.lua`. Pattern is as follows: `["item_name"] = {batch_size, threshold}` as well as the time inbetween craft checks.
+!! Keep in mind that threshold should only be added if necessary and preferrably not in mainnet, since it has a performance impact!
 Reboot after changing values.

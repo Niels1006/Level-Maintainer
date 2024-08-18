@@ -10,12 +10,14 @@ function AE2.requestItem(name, threshold, count)
 
     if #craftables >= 1 then
         item = craftables[1].getItemStack()
-        itemInSystem = ME.getItemsInNetwork({
-        	["label"] = name        
-        })
-        if (#itemInSystem > 0 and itemInSystem[1]["size"] > threshold) then 
-            print("The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request.")
-            return false
+        if threshold ~= nil then
+            itemInSystem = ME.getItemsInNetwork({
+                ["label"] = name        
+            })
+            if (#itemInSystem > 0 and itemInSystem[1]["size"] > threshold) then 
+                print("The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request.")
+                return false
+            end
         end
         if item.label == name then
             local craft = craftables[1].request(count)

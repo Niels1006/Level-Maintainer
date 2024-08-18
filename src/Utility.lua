@@ -27,3 +27,7 @@ function parser(string)
         return 0
     end
 end
+
+function logInfo(string)
+    print("[" .. os.date("%H:%M:%S") .. "] " .. string)
+end

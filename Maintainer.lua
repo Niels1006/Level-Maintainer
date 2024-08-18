@@ -9,7 +9,7 @@ while true do
     local itemsCrafting = ae2.checkIfCrafting()
  
     for item, config in pairs(items) do
-        if itemsCrafting[k] ~= true then
+        if itemsCrafting[item] ~= true then
             local success, answer = ae2.requestItem(item, config[1], config[2])
             logInfo(answer)
         end

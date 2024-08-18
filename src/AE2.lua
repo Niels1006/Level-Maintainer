@@ -1,4 +1,5 @@
 local component = require("component")
+local util = require("src.Utility")
 local ME = component.me_interface
 
 local AE2 = {}
@@ -15,7 +16,7 @@ function AE2.requestItem(name, threshold, count)
                 ["label"] = name        
             })
             if (#itemInSystem > 0 and itemInSystem[1]["size"] > threshold) then 
-                print("The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request.")
+                logInfo("The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request.")
                 return false
             end
         end

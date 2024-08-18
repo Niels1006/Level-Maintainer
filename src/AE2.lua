@@ -1,5 +1,4 @@
 local component = require("component")
-local util = require("src.Utility")
 local ME = component.me_interface
 
 local AE2 = {}
@@ -16,8 +15,7 @@ function AE2.requestItem(name, threshold, count)
                 ["label"] = name        
             })
             if (#itemInSystem > 0 and itemInSystem[1]["size"] > threshold) then 
-                logInfo("The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request.")
-                return false
+                return table.unpack({false, "The amount of " .. itemInSystem[1]["label"] .. " exceeds threshold! Aborting request."})
             end
         end
         if item.label == name then
@@ -26,11 +24,15 @@ function AE2.requestItem(name, threshold, count)
             while craft.isComputing() == true do
                 os.sleep(1)
             end
-            return craft.hasFailed() == false
+            if craft.hasFailed() then
+                return table.unpack({false, "Failed to request " .. name .. "x " .. count})
+            else
+                return table.unpack({true, "Requested " .. name .. "x " .. count})
+            end
 
         end
     end
-    return nil
+    return table.unpack({false, name .. " is not craftable!"})
 end
 
 function  AE2.checkIfCrafting()

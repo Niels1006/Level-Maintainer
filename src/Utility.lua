@@ -29,5 +29,7 @@ function parser(string)
 end
 
 function logInfo(string)
-    print("[" .. os.date("%H:%M:%S") .. "] " .. string)
+    if type(string) == "string" then
+        print("[" .. os.date("%H:%M:%S") .. "] " .. string)
+    end
 end

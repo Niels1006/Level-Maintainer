@@ -10,12 +10,8 @@ while true do
  
     for item, config in pairs(items) do
         if itemsCrafting[k] ~= true then
-            local answer = ae2.requestItem(item, config[1], config[2])
-            if answer == true then
-                logInfo("Requested " .. item .. "x " .. config[2])
-            else
-                logInfo("Failed to request " .. item .. "x " .. config[2])
-            end
+            local success, answer = ae2.requestItem(item, config[1], config[2])
+            logInfo(answer)
         end
  
     end

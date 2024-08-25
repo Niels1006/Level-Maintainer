@@ -7,7 +7,7 @@ local cfg = {}
 -- ["drop of Molten SpaceTime"] = {1000000, 1} -- with threshold
 
 cfg["items"] = {
-    ["drop of Molten SpaceTime"] = {nil, 1}
+    ["drop of Molten SpaceTime"] = {nil, 1},
     ["drop of Molten White Dwarf Matter"] = {nil, 1}
 }
 

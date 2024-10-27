@@ -9,7 +9,7 @@ local function exists(filename)
 end
 
 local repo = "https://raw.githubusercontent.com/Niels1006/Infinite-Maintainer/";
-local branch = "master"
+local branch = "1.12"
 
 for i = 1, #paths do
     if not filesystem.exists(shell.getWorkingDirectory() .. "/" .. paths[i]) then

@@ -11,7 +11,7 @@ Maybe I will also add a threshold option, but it's not needed for passive lines,
 # Installation
 Download it
 ```bash
-wget https://raw.githubusercontent.com/Niels1006/Infinite-Maintainer/master/installer.lua && installer
+wget https://raw.githubusercontent.com/Niels1006/Infinite-Maintainer/1.12/installer.lua && installer
 ```
 
 Run it

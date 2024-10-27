@@ -1,3 +1,7 @@
+package.loaded["src.AE2"] = nil
+package.loaded["config"] = nil
+package.loaded["src.Utility"] = nil
+
 local ae2 = require("src.AE2")
 local cfg = require("config")
 local util = require("src.Utility") 
@@ -11,7 +15,9 @@ while true do
     for item, config in pairs(items) do
         if itemsCrafting[item] ~= true then
             local success, answer = ae2.requestItem(item, config[1], config[2])
-            logInfo(answer)
+            if success == true then
+                logInfo(answer)
+            end
         end
  
     end

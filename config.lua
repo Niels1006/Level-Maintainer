@@ -1,25 +1,33 @@
-package.loaded["src.AE2"] = nil
-package.loaded["config"] = nil
-package.loaded["src.Utility"] = nil
+local cfg = {}
 
-local ae2 = require("src.AE2")
-local cfg = require("config")
-local util = require("src.Utility") 
+-- EXAMPLE --
 
-local items = cfg.items
-local sleepInterval = cfg.sleep
- 
-while true do
-    local itemsCrafting = ae2.checkIfCrafting()
- 
-    for item, config in pairs(items) do
-        if itemsCrafting[item] ~= true then
-            local success, answer = ae2.requestItem(item, config[1], config[2])
-            if success == true then
-                logInfo(answer)
-            end
-        end
- 
-    end
-    os.sleep(sleepInterval)
-end
+-- [item_name] = {threshold, batch_size} -- keep in mind that no threshold has a better performance!
+-- ["Osmium Dust"] = {nil, 64} -- without threshold, batch_size=64
+-- ["drop of Molten SpaceTime"] = {1000000, 1} -- with threshold
+
+cfg["items"] = {
+    ["Platinum Dust"] = {nil, 16},
+    ["Palladium Dust"] = {nil, 16},
+
+    ["Ruthenium Dust"] = {nil, 16},
+    ["Rhodium Dust"] = {nil, 16},
+
+    ["Iridium Dust"] = {nil, 16},
+    ["Osmium Dust"] = {nil, 16},
+
+    ["Gold Dust"] = {nil, 16},
+    ["Silicon Dust"] = {nil, 16},
+
+    ["Copper Dust"] = {nil, 16},
+    ["Nickel Dust"] = {nil, 16},
+
+    ["Drop of Ammonia"] = {nil, 16000},
+
+   
+    
+}
+
+cfg["sleep"] = 2
+
+return cfg
